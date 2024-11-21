@@ -156,9 +156,10 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend"
 )
 
+
+#GoogleOauth signedin user setup for Regular user and Admin User
 LOGIN_REDIRECT_URL = '/Task/postlogin/'
 ADMIN_REDIRECT_URL= '/Task/adminpage/' 
-#LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/Task/home/'
 
 #Email setup
@@ -167,6 +168,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'anujm77000@gmail.com'
-EMAIL_HOST_PASSWORD = 'qwuy ylqi fmyc jwqq'
+EMAIL_HOST_PASSWORD = '***************'
 SITE_URL = 'http://127.0.0.1:8000/Task/home/'
 DEFAULT_FROM_EMAIL = 'anujm77000@gmail.com'
