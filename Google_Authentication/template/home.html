@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block top %}
+<h1>Home Page</h1>
+
+    {% load socialaccount %}
+ <h2>User Login</h2>
+ <a href="{% provider_login_url 'google' %}">Login with Google</a>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block top %}
+ <form action="" method="post">
+    {% csrf_token %}
+      {{form.as_p}}
+      <p style="margin-bottom: 20px;"><button type="submit">Send Email</button></p>
+ </form>
+ <p style="margin-bottom: 20px;"><a href="{% url 'dashboard' %}"class="btn btn-success">Go Back</a></p>
+ {% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block top %}
+<html>
+<body>
+    <h1>Google SignedIn User Details</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Email</th>
+                <th>Provider</th>
+                <th>UID</th>
+                <th>Date Connected</th>
+            </tr>
+        </thead>
+        <tbody>   
+        
+            {% for account in social_accounts %}
+                <tr>
+                    <td>{{ account.user.username }}</td>
+                    <td>{{ account.user.email }}</td>
+                    <td>{{ account.provider }}</td>
+                    <td>{{ account.uid }}</td>
+                    <td>{{ account.date_joined}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>     
+    </table>
+</body>
+</html>
+{% endblock %}
+
+{% block content %}
+<h3>Invite user to Send Registraion Link</h3>
+
+<p style="margin-bottom: 20px;"><a href="{% url 'sendemail' %}" class="btn btn-success">Send Mail</a></p>
+<form action="{% url 'account_logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Logout" class="btn btn-danger">
+</form>
+{% endblock %}

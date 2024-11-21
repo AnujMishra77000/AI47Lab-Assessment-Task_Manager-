@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post" novalidate>
+  {% csrf_token %}
+   {{form.as_p}}
+ <a href="{% url 'GoogleOauth_Keys' %}" class="btn btn-primary">Submit</a>
+ </form>
+
+ {% endblock %}

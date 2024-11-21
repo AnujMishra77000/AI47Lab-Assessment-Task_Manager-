@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block top %}
+ <h1>Mail is send successfully !!!</h1>
+ <h2>want to send again</h2>
+ <p style="margin-bottom: 20px;"><a href="{% url 'sendemail' %}"class="btn btn-success">Send Again</a></p>
+
+ <p style="margin-bottom: 20px;"><a href="{% url 'adminpage' %}"class="btn btn-success">Go Back</a></p>
+
+ {% endblock %}
